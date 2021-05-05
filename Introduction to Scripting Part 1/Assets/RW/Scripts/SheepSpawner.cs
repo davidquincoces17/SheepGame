@@ -44,4 +44,15 @@ public class SheepSpawner : MonoBehaviour
         sheepList.Remove(sheep);
     }
 
+    public void DestroyAllSheep()
+    {
+        foreach (GameObject sheep in sheepList) // 1
+        {
+            Destroy(sheep); // 2
+        }
+
+        sheepList.Clear();
+    }
+
+
 }
